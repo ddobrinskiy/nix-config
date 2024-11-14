@@ -5,6 +5,19 @@
     initExtra = ''
       export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/go/bin"
     '';
+    zsh-autoenv.enable = true;
+    syntaxHighlighting.enable = true;
+    ohMyZsh = {
+      enable = true;
+      theme = "robbyrussell";
+      plugins = [
+        "git"
+        "fzf-zsh-plugin"
+        "zsh-syntax-highlighting"
+        "python"
+        "man"
+      ];
+    };
   };
 
   home.shellAliases = {
