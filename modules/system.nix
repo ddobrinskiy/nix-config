@@ -32,7 +32,7 @@
       # other macOS's defaults configuration.
 
       dock = {
-        autohide = true;
+        autohide = false;
         show-recents = false;  # disable recent apps
         mru-spaces = false;  # disable recent spaces
 

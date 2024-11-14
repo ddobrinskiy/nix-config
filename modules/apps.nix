@@ -20,17 +20,20 @@
   environment.systemPackages = with pkgs; [
     bat # cat replacement
     bottom # top replacement
+    chafa # show images in terminal
     duf # df replacement
+    exiftool # show metadata of images
     eza # ls replacement
-    fzf
     fzf # fuzzy finder
-    fzf-zsh
+    fzf-zsh # fzf wrapper for oh-my-zsh
     gh # GitHub CLI
     git
+    just # use Justfile to simplify nix-darwin's commands 
+    lazygit # git tui
+    lesspipe # better pipe support for less
     mas # Mac App Store CLI
     neofetch
     neovim
-    just # use Justfile to simplify nix-darwin's commands 
     uutils-coreutils-noprefix
     vim
     zsh

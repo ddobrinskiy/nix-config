@@ -1,13 +1,13 @@
-{...}: {
+{pkgs, ...}: {
   programs.zsh = {
     enable = true;
     enableCompletion = true;
     initExtra = ''
-      export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/go/bin"
+      export PATH="$PATH:$HOME/bin"
+      export PATH="$PATH:$HOME/.local/bin"
     '';
-    zsh-autoenv.enable = true;
     syntaxHighlighting.enable = true;
-    ohMyZsh = {
+    oh-my-zsh = {
       enable = true;
       theme = "robbyrussell";
       plugins = [
@@ -17,15 +17,19 @@
         "python"
         "man"
       ];
+      custom = "$HOME/.oh-my-zsh/custom";
     };
   };
 
   home.shellAliases = {
+    df = "duf";
+    htop = "btm";
     ls = "eza -al";
     top = "btm";
-    htop = "btm";
 
     urldecode = "python3 -c 'import sys, urllib.parse as ul; print(ul.unquote_plus(sys.stdin.read()))'";
     urlencode = "python3 -c 'import sys, urllib.parse as ul; print(ul.quote_plus(sys.stdin.read()))'";
   };
+
+
 }
