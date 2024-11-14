@@ -29,10 +29,13 @@
     git
     mas # Mac App Store CLI
     neofetch
+    neovim
+    just # use Justfile to simplify nix-darwin's commands 
     uutils-coreutils-noprefix
     vim
     zsh
   ];
+  environment.variables.EDITOR = "nvim";
 
   # TODO To make this work, homebrew need to be installed manually, see https://brew.sh
   #
@@ -43,6 +46,7 @@
 
     onActivation = {
       autoUpdate = true;
+      upgrade = true; # Upgrade outdated casks, formulae, and App Store apps
       # 'zap': uninstalls all formulae(and related files) not listed here.
       # cleanup = "zap";
     };
@@ -64,13 +68,14 @@
       "brave-browser" # Privacy focused browser
       "choosy" # chooser for browser links
       "cursor" # AI code editor
+      "gifox" # GIF recorder
       "google-chrome"
+      "iina" # video player
       "iterm2"
       "raycast" # Spotlight replacement
+      "shottr" # Screenshot tool
       "telegram"
       "vorta" # BORG backup tool
-      "gifox" # GIF recorder
-      "shottr" # Screenshot tool
       "zoom" # Video conferencing
     ];
 

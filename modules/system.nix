@@ -31,14 +31,34 @@
 
       # other macOS's defaults configuration.
 
-      # macOS dock does not hide automatically
-      dock.autohide = false;
-      # Don't rearrange spaces based on the most recent use
-      dock.mru-spaces = false;
-      # Finder shows all file extensions
-      finder.AppleShowAllExtensions = true;
-      # Default Finder folder view is the columns view
-      finder.FXPreferredViewStyle = "clmv";
+      dock = {
+        autohide = true;
+        show-recents = false;  # disable recent apps
+        mru-spaces = false;  # disable recent spaces
+
+        # customize Hot Corners(触发角, 鼠标移动到屏幕角落时触发的动作)
+        wvous-tr-corner = 13;  # top-right - Lock Screen
+        wvous-br-corner = 4;  # bottom-right - Desktop
+      };
+
+      finder = {
+        AppleShowAllExtensions = true;  # show all file extensions
+        FXPreferredViewStyle = "clmv";  # default folder view is the columns view
+      };
+
+      # customize settings that not supported by nix-darwin directly
+      # Incomplete list of macOS `defaults` commands :
+      #   https://github.com/yannbertrand/macos-defaults
+      NSGlobalDomain = {
+        NSAutomaticCapitalizationEnabled = false;  # disable auto capitalization(自动大写)
+        NSAutomaticDashSubstitutionEnabled = false;  # disable auto dash substitution(智能破折号替换)
+        NSAutomaticPeriodSubstitutionEnabled = false;  # disable auto period substitution(智能句号替换)
+        NSAutomaticQuoteSubstitutionEnabled = false;  # disable auto quote substitution(智能引号替换)
+        NSAutomaticSpellingCorrectionEnabled = false;  # disable auto spelling correction(自动拼写检查)
+        NSNavPanelExpandedStateForSaveMode = true;  # expand save panel by default(保存文件时的路径选择/文件名输入页)
+        NSNavPanelExpandedStateForSaveMode2 = true;
+      };
+
       # The login window shows a specific text as a greeting
       # loginwindow.LoginwindowText = "Welcome";
       # When taking screenshots, store these in a specific folder
@@ -54,5 +74,27 @@
   # Create /etc/zshrc that loads the nix-darwin environment.
   # this is required if you want to use darwin's default shell - zsh
   programs.zsh.enable = true;
+  environment.shells = [
+    pkgs.zsh
+  ];
+  fonts = {
+    packages = with pkgs; [
+      # icon fonts
+      material-design-icons
+      font-awesome
 
+      # nerdfonts
+      # https://github.com/NixOS/nixpkgs/blob/nixos-24.05/pkgs/data/fonts/nerdfonts/shas.nix
+      (nerdfonts.override {
+        fonts = [
+          # symbols icon only
+          "NerdFontsSymbolsOnly"
+          # Characters
+          "FiraCode"
+          "JetBrainsMono"
+          "Iosevka"
+        ];
+      })
+    ];
+  };
 }
