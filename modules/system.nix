@@ -36,7 +36,7 @@
         show-recents = false;  # disable recent apps
         mru-spaces = false;  # disable recent spaces
 
-        # customize Hot Corners(触发角, 鼠标移动到屏幕角落时触发的动作)
+        # customize Hot Corners
         wvous-tr-corner = 13;  # top-right - Lock Screen
         wvous-br-corner = 4;  # bottom-right - Desktop
       };
@@ -67,9 +67,6 @@
       screensaver.askForPasswordDelay = 10;
     };
   };
-
-  # Add ability to used TouchID for sudo authentication
-  security.pam.enableSudoTouchIdAuth = true;
 
   # Create /etc/zshrc that loads the nix-darwin environment.
   # this is required if you want to use darwin's default shell - zsh

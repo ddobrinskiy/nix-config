@@ -65,6 +65,7 @@
       modules = [
         ./modules/nix-core.nix
         ./modules/system.nix
+        ./modules/touch-id.nix
         ./modules/apps.nix
 
         ./modules/host-users.nix
