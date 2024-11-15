@@ -71,6 +71,7 @@
       "brave-browser" # Privacy focused browser
       "choosy" # chooser for browser links
       "cursor" # AI code editor
+      "datagrip" # JetBrains DataGrip
       "gifox" # GIF recorder
       "google-chrome"
       "iina" # video player
