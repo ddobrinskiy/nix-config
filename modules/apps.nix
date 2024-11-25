@@ -32,10 +32,11 @@
     lazygit # git tui
     lesspipe # better pipe support for less
     mas # Mac App Store CLI
+    micromamba # Python package manager
     neofetch
     neovim
+    tmux
     uutils-coreutils-noprefix
-    vim
     zsh
   ];
   environment.variables.EDITOR = "nvim";
@@ -68,6 +69,9 @@
     # `brew install --cask`
     # TODO Feel free to add your favorite apps here.
     casks = [
+      "amneziavpn" # VPN
+      "betterdisplay"
+      "bettertouchtool"
       "brave-browser" # Privacy focused browser
       "choosy" # chooser for browser links
       "cursor" # AI code editor
@@ -76,9 +80,14 @@
       "google-chrome"
       "iina" # video player
       "iterm2"
+      "linear-linear" # Jira alternative
+      "microsoft-teams" # Slack for corpos
+      "mitmproxy" # HTTP proxy analytics tool
       "raycast" # Spotlight replacement
       "shottr" # Screenshot tool
+      "spotify"
       "telegram"
+      "transmission" # Torrent client
       "vorta" # BORG backup tool
       "zoom" # Video conferencing
     ];
@@ -90,6 +99,7 @@
       "Quick View Calendar" = 1087080039;
       "Be Focused - Pomodoro" = 973134470;
       "WhatsApp Messenger" = 310633997;
+      # "iLovePDF" = 1207332399;
     };
   };
 }

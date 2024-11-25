@@ -5,6 +5,7 @@
     initExtra = ''
       export PATH="$PATH:$HOME/bin"
       export PATH="$PATH:$HOME/.local/bin"
+      export PATH="$PATH:$HOME/micromamba/envs/py312/bin"
     '';
     syntaxHighlighting.enable = true;
     oh-my-zsh = {
