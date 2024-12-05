@@ -79,6 +79,7 @@
       "cursor" # AI code editor
       "datagrip" # JetBrains DataGrip
       "dbeaver-community" # DataGrip alternative
+      "firecamp" # postman alternative
       "gifox" # GIF recorder
       "google-chrome"
       "iina" # video player
