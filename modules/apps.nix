@@ -64,23 +64,29 @@
     # TODO Feel free to add your favorite apps here.
     brews = [
       "aria2"  # download tool
+      "node" # nodejs
     ];
 
     # `brew install --cask`
     # TODO Feel free to add your favorite apps here.
     casks = [
       "amneziavpn" # VPN
+      "airbuddy"
       "betterdisplay"
       "bettertouchtool"
       "brave-browser" # Privacy focused browser
       "choosy" # chooser for browser links
       "cursor" # AI code editor
       "datagrip" # JetBrains DataGrip
+      "dbeaver-community" # DataGrip alternative
       "gifox" # GIF recorder
       "google-chrome"
       "iina" # video player
       "iterm2"
+      "limitless" # AI-powered meeting transcription
       "linear-linear" # Jira alternative
+      "loom" # screen recording
+      "macwhisper" # ai voice to text
       "microsoft-teams" # Slack for corpos
       "mitmproxy" # HTTP proxy analytics tool
       "raycast" # Spotlight replacement
