@@ -64,6 +64,7 @@
     # TODO Feel free to add your favorite apps here.
     brews = [
       "aria2"  # download tool
+      "ffmpeg" # video tools
       "node" # nodejs
     ];
 
